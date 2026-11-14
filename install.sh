@@ -5,6 +5,7 @@ set -euo pipefail
 UUID="desklet-template@egemngyk"
 SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/$UUID"
 DEST="${XDG_DATA_HOME:-$HOME/.local/share}/cinnamon/desklets/$UUID"
+CFG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/cinnamon/spices/$UUID"
 
 if [[ "${1:-}" == "--uninstall" ]]; then
     rm -rf "$DEST"
@@ -13,11 +14,18 @@ if [[ "${1:-}" == "--uninstall" ]]; then
 fi
 
 [[ -f "$SRC/metadata.json" ]] || { echo "Error: $SRC/metadata.json not found" >&2; exit 1; }
+
+# Install files
 mkdir -p "$(dirname "$DEST")"
 rm -rf "$DEST"
 cp -r "$SRC" "$DEST"
 echo "Installed: $DEST"
 
+# Always clear cached settings so layout changes take effect immediately
+rm -f "$CFG_DIR"/*.json
+echo "Settings cache cleared."
+
+# Reload desklet in Cinnamon
 if command -v gdbus > /dev/null 2>&1; then
     gdbus call --session --dest org.Cinnamon --object-path /org/Cinnamon \
         --method org.Cinnamon.ReloadXlet "$UUID" "DESKLET" > /dev/null 2>&1 || true
