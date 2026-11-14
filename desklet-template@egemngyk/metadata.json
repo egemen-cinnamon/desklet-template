@@ -1,0 +1,9 @@
+{
+    "uuid": "desklet-template@egemngyk",
+    "name": "Cinnamon Desklet",
+    "description": "A minimal Cinnamon desklet template.",
+    "version": "1.0.0",
+    "max-instances": "50",
+    "website": "https://github.com/egemngyk",
+    "license": "MIT"
+}
