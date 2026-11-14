@@ -1,38 +1,4 @@
 {
-  "accentColor": {
-    "type": "colorchooser",
-    "default": "rgb(79,157,222)",
-    "description": "Accent color"
-  },
-  "language": {
-    "type": "combobox",
-    "default": "en",
-    "description": "Language",
-    "tooltip": "Language of the desklet interface (week titles, buttons and dialogs)",
-    "options": {
-      "English": "en",
-      "Turkish": "tr"
-    }
-  },
-  "deskletTitle": {
-    "type": "entry",
-    "default": "",
-    "description": "Desklet title",
-    "tooltip": "Custom name/title shown in the top bar. Leave empty to show the week dates only."
-  },
-  "textColor": {
-    "type": "colorchooser",
-    "default": "rgb(236,238,242)",
-    "description": "Text color"
-  },
-  "opacity": {
-    "type": "scale",
-    "default": 92,
-    "min": 10,
-    "max": 100,
-    "step": 1,
-    "description": "Background opacity (%)"
-  },
   "layout": {
     "type": "layout",
     "pages": [
@@ -114,6 +80,40 @@
         "borderRadius"
       ]
     }
+  },
+  "accentColor": {
+    "type": "colorchooser",
+    "default": "rgb(79,157,222)",
+    "description": "Accent color"
+  },
+  "language": {
+    "type": "combobox",
+    "default": "en",
+    "description": "Language",
+    "tooltip": "Language of the desklet interface (week titles, buttons and dialogs)",
+    "options": {
+      "English": "en",
+      "Turkish": "tr"
+    }
+  },
+  "deskletTitle": {
+    "type": "entry",
+    "default": "",
+    "description": "Desklet title",
+    "tooltip": "Custom name/title shown in the top bar. Leave empty to show the week dates only."
+  },
+  "textColor": {
+    "type": "colorchooser",
+    "default": "rgb(236,238,242)",
+    "description": "Text color"
+  },
+  "opacity": {
+    "type": "scale",
+    "default": 92,
+    "min": 10,
+    "max": 100,
+    "step": 1,
+    "description": "Background opacity (%)"
   },
   "uiScale": {
     "type": "combobox",
