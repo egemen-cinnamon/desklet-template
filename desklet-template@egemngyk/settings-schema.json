@@ -36,16 +36,16 @@
   "layout": {
     "type": "layout",
     "pages": [
-      "pageGeneral"
+      "pageAppearance",
+      "pageSize",
+      "pageColors",
+      "pageFrame"
     ],
-    "pageGeneral": {
+    "pageAppearance": {
       "type": "page",
-      "title": "General",
+      "title": "Appearance",
       "sections": [
         "secAppearance",
-        "secSize",
-        "secColors",
-        "secFrame",
         "secTitle"
       ]
     },
@@ -55,6 +55,20 @@
       "keys": [
         "language",
         "compact"
+      ]
+    },
+    "secTitle": {
+      "type": "section",
+      "title": "Title",
+      "keys": [
+        "deskletTitle"
+      ]
+    },
+    "pageSize": {
+      "type": "page",
+      "title": "Size",
+      "sections": [
+        "secSize"
       ]
     },
     "secSize": {
@@ -67,6 +81,13 @@
         "uiScale"
       ]
     },
+    "pageColors": {
+      "type": "page",
+      "title": "Colors",
+      "sections": [
+        "secColors"
+      ]
+    },
     "secColors": {
       "type": "section",
       "title": "Colors",
@@ -77,6 +98,13 @@
         "borderColor"
       ]
     },
+    "pageFrame": {
+      "type": "page",
+      "title": "Frame",
+      "sections": [
+        "secFrame"
+      ]
+    },
     "secFrame": {
       "type": "section",
       "title": "Frame and transparency",
@@ -84,13 +112,6 @@
         "opacity",
         "borderWidth",
         "borderRadius"
-      ]
-    },
-    "secTitle": {
-      "type": "section",
-      "title": "Title",
-      "keys": [
-        "deskletTitle"
       ]
     }
   },
