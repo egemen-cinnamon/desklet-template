@@ -18,11 +18,11 @@
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Pre-configured Cinnamon Settings**:
   - **Appearance**: Language selection, Compact mode toggle, Custom desklet title.
-  - **Size**: Configurable width, height, font size, and UI scale (%75 - %200).
+  - **Size**: Configurable width, height, font size, and UI scale (75% - 200%).
   - **Colors**: Full color pickers for background, text, accent, and borders.
   - **Frame & Transparency**: Opacity slider, border thickness, and corner radius.
 - **Sectioned Settings Schema**: Uses Cinnamon's native `layout` engine with clean, boxed setting groups on a single page.
@@ -35,7 +35,7 @@
 
 ---
 
-## 📦 Project Structure
+## Project Structure
 
 ```text
 desklet-template/
@@ -52,7 +52,7 @@ desklet-template/
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 ### Quick Install / Update
 
@@ -66,6 +66,7 @@ chmod +x install.sh
 ```
 
 Then add the desklet to your desktop:
+
 1. Right-click your Cinnamon panel or desktop and select **Desklets** (Masaüstü Araçları).
 2. Find **Cinnamon Desklet** in the list and click **+** (Add to desktop).
 3. Right-click the desklet on your desktop and select **Configure** to test the settings menu.
@@ -78,14 +79,16 @@ Then add the desklet to your desktop:
 
 ---
 
-## 🎨 How to Customize
+## How to Customize
 
 ### 1. Change the UUID and Name
+
 - Rename the folder `desklet-template@egemngyk` to your desired UUID: `<desklet-name>@<author>`.
 - Update `UUID` in `install.sh`.
 - Edit `metadata.json` with your project's name, description, author website, and version.
 
 ### 2. Build Your UI
+
 Open `desklet-template@egemngyk/desklet.js` and edit the `_render()` method:
 
 ```javascript
@@ -100,10 +103,11 @@ _render: function () {
 ```
 
 ### 3. Add Custom Settings
+
 Add new configuration keys to `desklet-template@egemngyk/settings-schema.json` and declare them in `CFG_KEYS` in `desklet.js`.
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the [MIT License](LICENSE).
